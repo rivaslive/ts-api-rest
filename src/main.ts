@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import routes from 'src/routes';
-import initializeServer from 'src/services/server';
+import routes from './routes';
+import initializeServer from './services/server';
 
 const startServer = initializeServer(routes);
 

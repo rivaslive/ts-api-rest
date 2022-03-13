@@ -1,9 +1,9 @@
-import mongoose from 'mongoose';
-import getConfig from 'src/services/config';
+import * as mongoose from 'mongoose';
+import getConfig from '../config';
 
 const { mongo } = getConfig;
 
-export const initializeDB = async (callback) => {
+const initializeDB = async (callback) => {
   try {
     await mongoose.connect(mongo.uri, mongo.options, callback);
     console.log('MongoDB connect successfully');
@@ -13,3 +13,5 @@ export const initializeDB = async (callback) => {
     console.error(error);
   }
 };
+
+export default initializeDB;

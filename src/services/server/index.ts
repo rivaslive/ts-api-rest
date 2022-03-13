@@ -1,7 +1,7 @@
 import express from 'express';
 
 import getConfig from '../config';
-import { initializeDB } from './db';
+import initializeDB from './db';
 
 const { port } = getConfig;
 
@@ -10,7 +10,7 @@ const app = express();
 // creating server
 const initializeServer = async (routes) => {
   // initialize DB
-  await initializeDB();
+  // await initializeDB();
 
   app.use(routes);
 

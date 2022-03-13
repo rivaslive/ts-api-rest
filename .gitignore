@@ -11,6 +11,7 @@
 # next.js
 /.next/
 /out/
+dist
 tsconfig.tsbuildinfo
 
 # production
@@ -32,7 +33,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-.idea
 .vscode
 
 # vercel
