@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import getModelName from 'utils/getModelName';
+import getModelName from 'Utils/getModelName';
 
 const { Schema } = mongoose;
 const { pluralName, singularName } = getModelName('example');
