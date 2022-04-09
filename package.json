@@ -1,6 +1,6 @@
 {
   "name": "ts-api-rest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Api created by create-rivas-node",
   "main": "src/main.ts",
   "author": "rivaslive",
