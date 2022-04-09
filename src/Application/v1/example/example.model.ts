@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
+import getModelName from 'utils/getModelName';
 
 const { Schema } = mongoose;
-const modelName = 'examples';
+const { pluralName, singularName } = getModelName('example');
 
 const schema = new Schema(
   {
@@ -30,11 +31,11 @@ const schema = new Schema(
 schema.set('toJSON', {
   virtuals: true,
   versionKey: false,
-  // transform(_doc, ret) {
-  //   // eslint-disable-next-line no-param-reassign,no-underscore-dangle
-  //   delete ret._id;
-  // },
+  transform(_doc, ret) {
+    delete ret._id;
+  },
 });
 
 // rename name Example to singular Model
-export default mongoose.models.Example || mongoose.model(modelName, schema);
+export default mongoose.models[singularName] ||
+  mongoose.model(pluralName, schema);

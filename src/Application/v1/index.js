@@ -3,6 +3,6 @@ import exampleRoutes from './example/example.route';
 
 const router = express.Router();
 
-router.use('/example', exampleRoutes);
+router.use('/examples', exampleRoutes);
 
 export default router;

@@ -12,8 +12,17 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "./src"
   },
   "include": ["./src", "./@types"],
-  "exclude": ["node_modules", "**/node_modules/*", ".eslintrc"]
+  "exclude": ["node_modules", "**/node_modules/*", ".eslintrc"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".d.ts", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  }
 }
